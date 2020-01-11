@@ -1,6 +1,6 @@
 # Shopping-cart webApp (With Mongo)
 
-An e-commerce web-application using javascript.
+An e-commerce web-application using js(Node,Express)
 ## Functionalities :
  - Admin can add , delete & update products.
  - User Registration.
