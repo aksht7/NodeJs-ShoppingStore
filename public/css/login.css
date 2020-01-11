@@ -1,0 +1,59 @@
+@charset "utf-8"; 
+
+body{
+    
+    padding: 0;
+    margin: 0;
+}
+.pic{
+    margin-top: 140px;
+    margin-left: 120px;
+    width:620px;
+    height: 415px;
+    background-image: url("images/bags.jpg");
+    float:left;
+}
+#main
+{
+    box-shadow: 0px 4px 8px #ccc;
+    border: 2px solid grey;
+    position: absolute;
+    top:25%;
+    left:68%;
+    font-size: 20px;
+    padding: 20px 45px;
+}
+#formm input::placeholder{
+    font-family:fontAwesome;
+}
+#set
+{
+    width: 100%;
+    font-size: 30px;
+    margin: 8px 0;
+    padding: 8px 0;
+    border-bottom:1px solid black;
+}
+#set input
+{
+    outline:none;
+    border:none;
+    background:none;
+}
+h1
+{
+    font-size:30px;
+    font-family: sans-serif;
+}
+#btn
+{
+    height: 40px;
+    width:70px;
+    border:none;
+    font-size: 15px;
+    font-family:sans-serif;
+    color: white;
+    background: black;
+    margin-top: 20px;
+    border-radius: 80px;
+}

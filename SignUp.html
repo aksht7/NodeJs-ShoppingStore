@@ -1,0 +1,31 @@
+<!Doctype html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/SignUp.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta lang="en-US" />
+    <meta charset="utf-8" />
+<title>Sign Up</title>
+<body onload="getRegisteredUser()">
+    <div class="pic"></div>
+    <div id="main">
+        <h1>Sign Up</h1>
+        <form id="formm" method="post" action="/SignUp">
+            <div id="set">
+        <input id="name" type="text" placeholder="name" oninput="setCustomValidity('')" name="name"> 
+        </div>
+    <div id="set">
+        <input id="uname" type="text" placeholder=" &#xf007; username" oninput="setCustomValidity('')" name="uname"> 
+        </div>
+        <div id="set">
+        <input id="password" type="password" placeholder=" &#xf023; password" name="password" required>
+        </div>
+             <div id="set">
+        <input id="email" type="text" placeholder=" &#xf003; email" oninput="setCustomValidity('')" name="email">
+    </div>
+        <b><input id="btn" type="submit" value="Sign Up" onclick="checkValidation();"></b>
+        </form>
+    </div>
+    </body>
+    <script src="SignUp.js" type="text/javascript"></script>
+</head>
+</html>

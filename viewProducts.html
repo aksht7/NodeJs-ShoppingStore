@@ -1,0 +1,155 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body
+        {
+            font-family: 'Exo 2', sans-serif;
+        }
+        .mySlides{
+            display: none;
+        }
+        .slideshow-container {
+    margin-left: 10%;
+    padding: 50px 0px;
+    width: 90%;
+    height: 50%;
+    overflow: hidden;
+}
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display:inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+        a
+        {
+            font-weight: bold;
+            margin-left:900px; 
+            color:black;
+            font-family: 'Exo 2', sans-serif;
+            text-decoration: none;
+            position: relative;
+        }
+        a:hover{
+            transition: 0.5s;
+            color:grey;
+            
+        }
+         h3
+        {
+            margin-top: 30px;
+            color: #262626;
+        }
+        #navigation{
+            overflow: hidden;
+            box-shadow: 0px 4px 8px #ccc;
+        }
+         #navigation p{
+             margin-left: 12px;
+            float: right;
+            text-align: center;
+            
+        }
+        #navigation a{
+            margin-top:15px; 
+            float: right;
+            text-align: center;
+            padding: 5px 10px;
+        }
+        .productDiv:hover{
+            box-shadow: 0px 4px 8px #ccc;
+        }
+        .box{
+            margin-top: 30px;
+        }
+        .logo-image{
+             margin-top: 10px;
+             margin-left: 40px;
+             margin-bottom: 15px;
+             width: 46px;
+             overflow: hidden;
+        }
+    </style>
+    </head>
+    <body onload="getStoredProducts()">
+        <div class="main">
+            <div style="font-size: 20px;"id="navigation">
+            <img class="logo-image"src="images/shop.png">
+            </div>   
+        </div>
+         <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/shop0.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/shop1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/shop2.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div> 
+    <div class="box">
+        <div style="float: left; width=100%;height=100%;margin-left: 150px;"><img src="images/box1.jpg"></div>
+        <div style="float:left;width=100%;height=100%;margin-left: 60px;"><img src="images/box2.jpg"></div>
+        <div style="float:left;width=100%;height=100%;margin-left: 60px;"><img src="images/box3.jpg"></div>
+        </div>
+        <div id="divListOfProducts">
+        </div>
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+    </body>
+    <script src="viewProducts.js" type="text/javascript"></script>
+</html>

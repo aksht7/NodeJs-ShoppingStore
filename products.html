@@ -1,0 +1,44 @@
+<html>
+<head>
+    <style>
+        body
+        {
+            font-family: 'Exo 2', sans-serif;
+        }
+        .main{
+            margin-left: 50px;
+        }
+        a
+        {
+           margin-top:30px;
+           font-size:20px; 
+           color:black;
+           display: block;
+           font-family: 'Exo 2', sans-serif;
+           text-decoration: none;
+           position: relative;
+        }
+        h3
+        {
+            color: #262626;
+        }
+        a:hover{
+            transition: 0.5s;
+            color:grey;
+        }
+    </style>
+    </head>
+    <body onload="getStoredProducts()">
+    <div class="main">
+    <a href="#" id="aAddNewProduct">Add new Product</a>
+    <div id="divAddProduct">
+        
+        </div>
+        <div><h3>List of Products : </h3></div>
+        <div id="divListOfProducts">
+        
+        </div>
+        </div>
+    </body>
+    <script src="script.js" type="text/javascript"></script>
+</html>
